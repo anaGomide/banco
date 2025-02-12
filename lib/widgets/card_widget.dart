@@ -47,20 +47,28 @@ class CardWidget extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Icon(Icons.credit_card, color: Colors.white, size: 28.sp),
-                Icon(Icons.more_horiz, color: Colors.white70, size: 28.sp),
+                Icon(Icons.credit_card, color: Colors.white, size: 56.sp),
+                SizedBox(width: 10.w),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      "•••• ${card.lastDigits}",
+                      style: Theme.of(context).textTheme.headlineMedium!.copyWith(color: Colors.white),
+                    ),
+                    Text(
+                      card.name,
+                      style: Theme.of(context).textTheme.bodyLarge!.copyWith(color: Colors.white70),
+                    ),
+                  ],
+                ),
+                SizedBox(width: 100.w),
+                Icon(Icons.remove_red_eye_outlined, color: Colors.white70, size: 28.sp),
               ],
             ),
-            Text(
-              "•••• ${card.lastDigits}",
-              style: Theme.of(context).textTheme.headlineMedium!.copyWith(color: Colors.white),
-            ),
-            Text(
-              card.name,
-              style: Theme.of(context).textTheme.bodyLarge!.copyWith(color: Colors.white70),
-            ),
+
             SizedBox(height: 5.h), // 🔹 Reduz o espaçamento para evitar overflow
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -68,7 +76,7 @@ class CardWidget extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("Limite disponível", style: Theme.of(context).textTheme.bodyMedium!.copyWith(color: Colors.white70)),
+                    Text("Limite disponível", style: Theme.of(context).textTheme.bodySmall!.copyWith(color: Colors.white70)),
                     Text("R\$ ${card.availableLimit.toStringAsFixed(2)}",
                         style: Theme.of(context).textTheme.labelLarge!.copyWith(color: Colors.white)),
                   ],
@@ -76,7 +84,7 @@ class CardWidget extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    Text("Melhor dia de compra", style: Theme.of(context).textTheme.bodyMedium!.copyWith(color: Colors.white70)),
+                    Text("Melhor dia de compra", style: Theme.of(context).textTheme.bodySmall!.copyWith(color: Colors.white70)),
                     Text("${card.bestPurchaseDay}", style: Theme.of(context).textTheme.labelLarge!.copyWith(color: Colors.white)),
                   ],
                 ),

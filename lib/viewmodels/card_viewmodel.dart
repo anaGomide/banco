@@ -14,9 +14,9 @@ class CardViewModel {
       availableLimit: 7867.80,
       bestPurchaseDay: 20,
       transactions: [
-        TransactionModel(title: "Apple Store", date: "05/09 às 22:35", amount: 545.99, type: "Saída", category: "Eletrônicos"),
-        TransactionModel(title: "Uber Trip", date: "05/09 às 15:25", amount: 12.96, type: "Saída", category: "Transporte"),
-        TransactionModel(title: "Carrefour", date: "03/09 às 09:34", amount: 349.76, type: "Saída", category: "Supermercado"),
+        TransactionModel(title: "Apple Store", date: "2024/05/09 22:35", amount: 545.99, category: "Eletrônicos", installments: 12),
+        TransactionModel(title: "Uber Trip", date: "2024/05/09 15:25", amount: 12.96, category: "Transporte"),
+        TransactionModel(title: "Carrefour", date: "2024/03/09 09:34", amount: 349.76, category: "Supermercado", installments: 3),
       ],
     ),
     CardModel(
@@ -26,9 +26,9 @@ class CardViewModel {
       availableLimit: 4520.00,
       bestPurchaseDay: 15,
       transactions: [
-        TransactionModel(title: "Netflix", date: "06/09 às 21:00", amount: 39.90, type: "Saída", category: "Entretenimento"),
-        TransactionModel(title: "McDonald's", date: "06/09 às 12:45", amount: 25.50, type: "Saída", category: "Alimentação"),
-        TransactionModel(title: "Farmácia", date: "05/09 às 10:30", amount: 78.90, type: "Saída", category: "Saúde"),
+        TransactionModel(title: "Netflix", date: "2024/06/09 21:00", amount: 39.90, category: "Entretenimento"),
+        TransactionModel(title: "McDonald's", date: "2024/06/09 12:45", amount: 25.50, category: "Alimentação"),
+        TransactionModel(title: "Farmácia", date: "2024/05/09 10:30", amount: 78.90, category: "Saúde", installments: 2),
       ],
     ),
   ];
